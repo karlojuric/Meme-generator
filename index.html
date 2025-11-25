@@ -20,6 +20,7 @@
             <div class="canvas-wrapper">
                 <div class="canvas-container">
                     <canvas id="memeCanvas"></canvas>
+                    <div class="text-boxes-overlay" id="textBoxesOverlay"></div>
                     <div class="upload-overlay" id="uploadOverlay">
                         <div class="upload-icon">
                             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -64,12 +65,12 @@
                     <div class="control-section">
                         <div class="section-header">
                             <span class="section-icon">✏️</span>
-                            <h3>Title Boxes</h3>
+                            <h3>Descriptions</h3>
                         </div>
-                        <button id="addTitleBtn" class="btn btn-success">
-                            <span>+ Add Title Box</span>
+                        <button id="addDescriptionBtn" class="btn btn-success">
+                            <span>+ Add Description</span>
                         </button>
-                        <div id="titleBoxesContainer" class="text-boxes-list"></div>
+                        <div id="descriptionsContainer" class="text-boxes-list"></div>
                     </div>
                     
                     <div class="control-section download-section">
@@ -85,4 +86,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
