@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😄</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Meme Generator</h1>
+                <p class="subtitle">Create hilarious memes in seconds</p>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="canvas-wrapper">
+                <div class="canvas-container">
+                    <canvas id="memeCanvas"></canvas>
+                    <div class="upload-overlay" id="uploadOverlay">
+                        <div class="upload-icon">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                        </div>
+                        <p>Drag & drop an image here</p>
+                        <p class="upload-subtext">or click to browse</p>
+                        <input type="file" id="imageInput" accept="image/*">
+                        <label for="imageInput" class="upload-btn">Choose Image</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls-panel">
+                <div class="panel-header">
+                    <h2>Controls</h2>
+                </div>
+                
+                <div class="panel-content">
+                    <div class="control-section">
+                        <div class="section-header">
+                            <span class="section-icon">🖼️</span>
+                            <h3>Templates</h3>
+                        </div>
+                        <div id="templatesGrid" class="templates-grid"></div>
+                    </div>
+                    
+                    <div class="control-section">
+                        <div class="section-header">
+                            <span class="section-icon">📤</span>
+                            <h3>Upload Image</h3>
+                        </div>
+                        <input type="file" id="imageInputControl" accept="image/*">
+                        <label for="imageInputControl" class="btn btn-primary">
+                            <span>Upload Your Image</span>
+                        </label>
+                    </div>
+                    
+                    <div class="control-section">
+                        <div class="section-header">
+                            <span class="section-icon">✏️</span>
+                            <h3>Title Boxes</h3>
+                        </div>
+                        <button id="addTitleBtn" class="btn btn-success">
+                            <span>+ Add Title Box</span>
+                        </button>
+                        <div id="titleBoxesContainer" class="text-boxes-list"></div>
+                    </div>
+                    
+                    <div class="control-section download-section">
+                        <button id="downloadBtn" class="btn btn-download">
+                            <span>Download Meme</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
